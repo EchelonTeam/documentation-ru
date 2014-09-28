@@ -34,9 +34,12 @@ Console
     $ chmod +x bin/console
 
 
-| Конструктор класса `\\Vermillion\\Console\\Application` принимает два аргумента. 
-| Первый - путь к директорию с конфигами, второй (опциональный) - экземпляр класса `\\Pimple\\Container`.
-| В директории с конфигами обязательно должен быть файл `providers.php`, который возвращает массив доступных провайдеров.
+
+Конструктор класса `\\Vermillion\\Console\\Application` принимает два аргумента. 
+ Первый - путь к директорию с конфигами, второй (опциональный) - экземпляр класса `\\Pimple\\Container`.
+ 
+ В директории с конфигами обязательно должен быть файл `providers.php`, который возвращает массив доступных провайдеров.
+
 
 Пример:
 
@@ -59,10 +62,12 @@ Console
 
 Методы `setName()` и `setVersion()` устанавливают имя и версию приложения.
 
-| Метод `run($interactive = false, InputInterface $in = null, OutputInterface $out = null)` - запускает приложение.
-| Аргумент `$interactive` позволяет запусить шелл.
-| Аргументы `$in` и `$out` - экземпляры классов, реализующих `\\Symfony\\Component\\Console\\Input\\InputInterface` и `\\Symfony\\Component\\Console\\Output\\OutputInterface`.
-| При запуске шелла изменение значений аргументов не будет иметь никакого эффекта.
+Метод `run($interactive = false, InputInterface $in = null, OutputInterface $out = null)` - запускает приложение.
+ Аргумент `$interactive` позволяет запусить шелл.
+ 
+ Аргументы `$in` и `$out` - экземпляры классов, реализующих `\\Symfony\\Component\\Console\\Input\\InputInterface` и `\\Symfony\\Component\\Console\\Output\\OutputInterface`.
+
+ При запуске шелла изменение значений аргументов не будет иметь никакого эффекта.
 
 Добавление команд
 ~~~~~~~~~~~~~~~~~~
