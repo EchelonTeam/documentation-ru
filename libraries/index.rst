@@ -7,6 +7,7 @@
     authentication
     captcha
     configuration
+    console
     json-rpc
     response-factory
     security-core
