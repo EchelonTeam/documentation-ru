@@ -26,11 +26,13 @@ Response Factory
 - `response_factory.request_key` - Имя атрибута запроса для получения имени обработчика
 - `response_factory.priority` - Приоритет для обработчика события ответа от контроллера
 - `response_factory.handlers` - Список обработчиков (json доступен по умолчанию)
+- `response_factory.default_handler` - Обработчик, используемый по умолчанию, если атрибут не указан.
 
 Вы так же можете определить свой обработчик:
 
 .. code-block:: php
 
+    <?php
     // providers.php
     return [
         '\\Vermillion\\Provider\\ResponseFactory\\Provider' => [
@@ -49,6 +51,7 @@ Response Factory
 
 .. code-block:: php
 
+    <?php
     use Symfony\Component\EventDispatcher\EventDispatcher;
     use Vermillion\ResponseFactory\ControllerResponseListener;
     use Vermillion\ResponseFactory\HandlerCollection;
@@ -64,7 +67,8 @@ Response Factory
     $collection = new HandlerCollection($handlers);
     $priority = 256; // Приоритет для обработчика события ответа от контроллера
     $requestKey = '_handler'; // Имя атрибута запроса для получения имени обработчика
-    $listener = new ControllerResponseListener($collection, $requestKey, $priority);
+    $defaultHandler = null; // Имя обработчика, используемого по умолчанию
+    $listener = new ControllerResponseListener($collection, $requestKey, $priority, $defaultHandler);
     $eventDispatcher = new EventDispatcher();
     $eventDispatcher->addSubscriber($listener);
 
@@ -97,6 +101,7 @@ Response Factory
 
 .. code-block:: php
 
+    <?php
     // Метод какого-либо контроллера
     public function greet($name) 
     {
