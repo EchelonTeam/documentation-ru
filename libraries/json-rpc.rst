@@ -19,6 +19,7 @@ JSON-RPC Provider
 
 .. code-block:: php
 
+    <?php
     use Pimple\Container;
     use Pimple\ServiceProviderInterface;
     
@@ -34,8 +35,6 @@ JSON-RPC Provider
     
     }
     
-Для более подробной информации обратитесь к документации библиотеки.
-
 Если вам требуется использовать JSON-RPC через HTTP, то вы можете воспользоваться контроллером, предоставляемым провайдером по умолчанию.
 
 Для этого необходимо добавить `\\Vermillion\\Provider\\JsonRpc\\ControllerProvider` в `providers.php` и отредактировать `routing.yml`:
@@ -46,3 +45,23 @@ JSON-RPC Provider
       path: /rpc/
       defaults: {_controller: jsonrpc:rpc}
       requirements: {_method: POST}
+
+
+Вы можете зарегистрировать функцию обратного вызова, которая будет выполнена перед выполнением какого-либо метода.
+
+.. code-block:: php
+
+    <?php
+    $pimple['jsonrpc.middlewares'] = [
+        function (\Kilte\JsonRpc\Request\Request $request) use ($security) {
+            if ($request->getMethod() == 'admin' && !$security->isGranted('ROLE_ADMIN')) {
+                throw new \RuntimeException('Access denied');
+            }
+        },
+        function (\Kilte\JsonRpc\Request\Request $request) use ($logger) {
+            $logger->info(sprintf('RPC call: %s %s %s', $request->getId(), $request->getMethod(), json_encode($request->getParams())));
+        }
+    ];
+
+
+Для более подробной информации обратитесь к документации библиотеки.
