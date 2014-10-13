@@ -8,7 +8,7 @@ Configuration
 
 Провайдер уже зарегистрирован по умолчанию.
 
-Для загрузки конфигурационного файла воспользуйтесь сервисом `config`, который является экземпляром класса, реализующего `Symfony\Component\Config\Loader\LoaderInterface`.
+Для загрузки конфигурационного файла воспользуйтесь сервисом `config`, который является экземпляром класса, реализующего `\\Symfony\\Component\\Config\\Loader\\LoaderInterface`.
 
 .. code-block:: php
 
