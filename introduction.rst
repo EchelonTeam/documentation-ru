@@ -17,6 +17,7 @@
 
 .. code-block:: php
 
+    <?php
     // public/index.php
     require __DIR__ . '/../vendor/autoload.php';
     $app = new \Vermillion\General\Application(__DIR__ . '/../config');
@@ -33,6 +34,7 @@
 
 .. code-block:: php
 
+    <?php
     // public/../config/providers.php
     return [
         "\\ControllerProvider"
@@ -45,6 +47,7 @@
 
 .. code-block:: php
 
+    <?php
     return [
         '\\SomeServiceProvider' => [
             'one_option' => 'value',
@@ -56,6 +59,7 @@
 
 .. code-block:: php
 
+    <?php
     return [
         '\\SomeServiceProvider' => [
             'service' => function ($c) {
@@ -74,6 +78,7 @@
 
 .. code-block:: php
 
+    <?php
     // controllers.php
     use Pimple\Container;
     use Symfony\Component\HttpFoundation\Response;

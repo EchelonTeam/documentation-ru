@@ -64,6 +64,7 @@ Middleware представляет собой класс, реализующи�
 
 .. code-block:: php
 
+    <?php
     use Pimple\Container;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;

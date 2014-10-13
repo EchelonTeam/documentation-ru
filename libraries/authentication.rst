@@ -28,7 +28,8 @@ Authentication Provider
 Пример контроллера:
 
 .. code-block:: php
-    
+
+    <?php
     use Symfony\Component\EventDispatcher\EventDispatcherInterface as Dispatcher;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\JsonResponse;
@@ -87,7 +88,8 @@ Authentication Provider
 Провайдер для контроллера:
 
 .. code-block:: php
-    
+
+    <?php
     use Pimple\Container;
     use Vermillion\Api\ControllerProviderInterface;
     

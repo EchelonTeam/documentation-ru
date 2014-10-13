@@ -22,7 +22,8 @@ Configuration
 Для того, чтобы получить доступ к службе, зарегистрируйте провайдер в `providers.php`:
 
 .. code-block:: php
-    
+
+    <?php
     // providers.php
     return [
         '\Vermillion\Config\Provider' => [
@@ -34,6 +35,7 @@ Configuration
 
 .. code-block:: php
 
+    <?php
     $c = new \Pimple\Container();
     $c->register(new \Vermillion\Config\Provider(), ['config.paths' => __DIR__ . '/config']);
     $config = $c['config']->load('config.yml');

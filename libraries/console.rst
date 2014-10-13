@@ -80,6 +80,7 @@ Console
 
 .. code-block:: php
 
+    <?php
     use Pimple\Container;
     use Symfony\Component\Console\Command\Command;
     use Vermillion\Console\CommandProviderInterface;

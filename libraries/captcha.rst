@@ -30,6 +30,7 @@ Captcha Provider
 
 .. code-block:: php
 
+    <?php
     $pimple['captcha.test']($request->get('captcha')); // true or false
 
 Опции
@@ -37,6 +38,7 @@ Captcha Provider
 
 .. code-block:: php
 
+    <?php
     'captcha.options' = [
         'session_key'   => 'gw_captcha', // Имя ключа для проверочного кода, который хранится в сессии
         'width'         => 150,
@@ -47,7 +49,7 @@ Captcha Provider
         'distortion'    => true,
         'background'    => [250, 0, 0],
         'interpolation' => true
-    ]
+    ];
 
 
 Для получения более подробной информации обратитесь к `API <https://github.com/gregwar/captcha#api>`_ библиотеки.

@@ -19,6 +19,7 @@ Session Provider
 
 .. code-block:: php
 
+    <?php
     // providers.php
     return [
         '\\Vermillion\\Provider\\Session\\Provider' => [
@@ -28,4 +29,3 @@ Session Provider
             'session.storage.save_path' => '',
         ]
     ];
-    

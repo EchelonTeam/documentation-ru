@@ -15,6 +15,7 @@ Security/Core Provider
 
 .. code-block:: php
 
+    <?php
     use Pimple\Container;
     use Vermillion\Provider\Security\SecurityCoreProvider;
     
@@ -47,6 +48,7 @@ Security/Core Provider
 
 .. code-block:: php
 
+    <?php
     use Pimple\Container;
     use Vermillion\Provider\Security\SecurityCoreProvider;
     
