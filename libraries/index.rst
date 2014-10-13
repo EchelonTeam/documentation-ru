@@ -9,6 +9,7 @@
     configuration
     console
     json-rpc
+    plates
     response-factory
-    security-core
+    security
     session

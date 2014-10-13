@@ -3,13 +3,6 @@ Console
 
 Обёртка для `Symfony/Console <http://symfony.com/doc/current/components/console/introduction.html>`_.
 
-Установка
----------
-
-.. code-block:: sh
-
-    $ composer require vermillion/console
-    
 Использование
 -------------
 
@@ -32,7 +25,6 @@ Console
 .. code-block:: sh
     
     $ chmod +x bin/console
-
 
 
 Конструктор класса `\\Vermillion\\Console\\Application` принимает два аргумента. 
@@ -59,7 +51,6 @@ Console
     
 
 Опции можно указывать только для провайдеров, реализующих `\\Pimple\\ServiceProviderInterface`.
-
 
 Методы `setName()` и `setVersion()` устанавливают имя и версию приложения.
 

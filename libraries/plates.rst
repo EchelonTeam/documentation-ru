@@ -3,17 +3,10 @@ Plates Provider
 
 Добавляет поддержку шаблонов с помощью `Plates <http://platesphp.com>`_.
 
-Установка
----------
-
-.. code-block:: sh
-
-    $ composer require vermillion/plates-provider
-
 Использование
 -------------
 
-Добавьте `\\Vermillion\\Provider\\Plates\\Provider` в `providers.php`.
+Добавьте `\\Vermillion\\Plates\\Provider` в `providers.php`.
 
 **Опции:**
 
@@ -30,7 +23,7 @@ Plates Provider
     <?php
     // providers.php
     return [
-        "\\Vermillion\\Provider\\Plates\\Provider" => [
+        "\\Vermillion\\Plates\\Provider" => [
             'plates.options.paths' => [
                 // name, directory, fallback (false by default)
                 ['main', $resources . 'views/'],

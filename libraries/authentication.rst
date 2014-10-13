@@ -1,21 +1,15 @@
-Authentication Provider
-=======================
+Authentication
+==============
 
 Добавляет поддержку аутентификации и является легковесной альтернативой `Symfony/Security-Http`.
-
-Установка
----------
-
-.. code-block:: sh
-
-    $ composer require vermillion/authentication-provider
-
-При установке этой библиотеки также будут установлены `vermillion/security-core-provider` и `vermillion/session-provider`. Поэтому вам потребуется сконфигурировать установленные провайдеры.
 
 Использование
 -------------
 
 Добавьте `\\Vermillion\\Authentication\\Provider` в `providers.php`.
+
+Для его работы также необходимо зарегистрировать и настроить `\\Vermillion\\Security\\Provider` и `\\Vermillion\\Session\\Provider`.
+За более подробной информацией обратитесь в соответствующие разделы.
 
 Доступные опции:
 
@@ -23,9 +17,7 @@ Authentication Provider
 - `authentication.remember_me.cookie_path` - Имя cookie из которой будет создаваться токен.
 - `authentication.remember_me.cookie_options` - Опции cookie (lifetime, path, domain, secure, http_only)
 
-Здесь также используются некоторые опции из `security-core-provider <https://github.com/vermillion-php/security-core-provider>`_.
-
-Пример контроллера:
+После регистрации провайдера необходимо создать контроллер, который будет аутентифицировать токен.
 
 .. code-block:: php
 
@@ -110,7 +102,6 @@ Authentication Provider
     }
 
 Незабудьте добавить провайдер в `providers.php`
-
 
 Отредактируйте `routing.yml`:
 

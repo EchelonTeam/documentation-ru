@@ -3,19 +3,12 @@ Captcha Provider
 
 Добавляет поддержку капчи с помощью `Gregwar/Captcha <https://github.com/gregwar/captcha>`_
 
-Установка
----------
-
-.. code-block:: sh
-
-    $ composer require vermillion/captcha-provider
-
-При установке этого провайдера также будет установлен `session-provider <https://github.com/vermillion-php/session-provider>`_.
-
 Использование
 -------------
 
-Добавьте `\\Vermillion\\Provider\\Captcha\\Provider` в `providers.php`
+Добавьте `\\Vermillion\\Captcha\\Provider` в `providers.php`
+
+Для его работы также необходимо зарегистрировать `\\Vermillion\\Session\\Provider`.
 
 Отредактируйте `routing.yml`:
 
