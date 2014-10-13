@@ -1,5 +1,5 @@
 Session Provider
-===========================
+================
 
 Предоставляет возможность использования сессий на основе `Symfony/HttpFoundation <http://symfony.com/doc/current/components/http_foundation/index.html>`_
 

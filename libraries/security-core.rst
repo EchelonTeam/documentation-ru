@@ -1,5 +1,5 @@
 Security/Core Provider
-=================================
+======================
 
 Предоставляет `Symfony/Security-Core <http://symfony.com/doc/current/components/security/index.html>`_ компонент для `Pimple <https://github.com/fabpot/Pimple>`_ и может быть использован независимо от фреймворка.
 
@@ -11,7 +11,7 @@ Security/Core Provider
     $ composer require vermillion/security-core-provider
 
 Использование
---------------
+-------------
 
 .. code-block:: php
 

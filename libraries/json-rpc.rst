@@ -1,5 +1,5 @@
 JSON-RPC Provider
-============================
+=================
 
 Добавляет поддержку `JSON-RPC <http://www.jsonrpc.org/specification>`_ с помощью `Kilte/JSON-RPC <https://github.com/Kilte/json-rpc>`_. 
 

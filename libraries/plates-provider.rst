@@ -1,5 +1,5 @@
 Plates Provider
-=======================
+===============
 
 Добавляет поддержку шаблонов с помощью `Plates <http://platesphp.com>`_.
 
@@ -11,7 +11,7 @@ Plates Provider
     $ composer require vermillion/plates-provider
 
 Использование
----------------
+-------------
 
 Добавьте `\\Vermillion\\Provider\\Plates\\Provider` в `providers.php`.
 

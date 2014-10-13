@@ -1,5 +1,5 @@
 Response Factory
-===========================
+================
 
 Эта библиотека позволяет конвертировать результаты работы контроллера в объекты класса `\\Symfony\\Component\\HttpFoundation\\Response`.
 
@@ -17,7 +17,7 @@ Response Factory
     $ composer require vermillion/response-factory
 
 Регистрация
--------------
+-----------
 
 Добавьте `\\Vermillion\\Provider\\ResponseFactory\\Provider` в `providers.php`:
 
@@ -73,7 +73,7 @@ Response Factory
     $eventDispatcher->addSubscriber($listener);
 
 Использование
----------------
+-------------
 
 Если вы используете Router из компонента `Symfony/Routing`, то вы можете определить имя обработчика в конфигурационном файле:
 

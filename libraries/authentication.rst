@@ -13,7 +13,7 @@ Authentication Provider
 При установке этой библиотеки также будут установлены `vermillion/security-core-provider` и `vermillion/session-provider`. Поэтому вам потребуется сконфигурировать установленные провайдеры.
 
 Использование
---------------
+-------------
 
 Добавьте `\\Vermillion\\Authentication\\Provider` в `providers.php`.
 

@@ -11,7 +11,7 @@ Configuration
     $ composer require vermillion/config
 
 Использование
---------------
+-------------
 
 Поддерживаемые типы файлов: `yaml`, `php`, `json`
 

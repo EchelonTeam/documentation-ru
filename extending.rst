@@ -14,7 +14,7 @@ Vermillion предлагает некоторые уже готовые реш�
     libraries/index
 
 Создание собственного провайдера
-----------------------------------
+--------------------------------
 
 Фреймворк предоставляет следующие интерфейсы для провайдеров:
 
@@ -24,7 +24,7 @@ Vermillion предлагает некоторые уже готовые реш�
 - `\\Vermillion\\General\\Api\\MiddlewareProviderInterface`
 
 BootableProviderInterface
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `void onBoot(\\Pimple\\Container $pimple)`
 
@@ -36,21 +36,21 @@ BootableProviderInterface
 Смотрите документацию к Pimple_ для более подробной информации.
 
 ControllerProviderInterface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `void registerControllers(\\Pimple\\Container $controllers, \\Pimple\\Container $pimple);`
 
 Используется для регистрации контроллеров в контейнере (`$controllers`).
 
 EventListenerProviderInterface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `void registerListeners(\\Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $dispatcher, \\Pimple\\Container $pimple)`
 
 Предназначен для регистрации обработчиков событий в диспетчере.
 
 MiddlewareProviderInterface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `\Symfony\Component\HttpKernel\HttpKernelInterface wrap(\\Symfony\\Component\\HttpKernel\\HttpKernelInterface $kernel, \\Pimple\\Container $pimple)`
 
