@@ -8,6 +8,7 @@
     captcha
     configuration
     console
+    js-url-generator
     json-rpc
     plates
     response-factory
