@@ -1,19 +1,20 @@
 Response Factory
 ================
 
-Эта библиотека позволяет конвертировать результаты работы контроллера в объекты класса `\\Symfony\\Component\\HttpFoundation\\Response`.
+Эта библиотека позволяет конвертировать результаты работы контроллера
+в объекты класса ``\Symfony\Component\HttpFoundation\Response``.
 
 Регистрация
 -----------
 
-Добавьте `\\Vermillion\\ResponseFactory\\Provider` в `providers.php`:
+Добавьте ``\\Vermillion\\ResponseFactory\\Provider`` в ``providers.php``:
 
 **Опции:**
 
-- `response_factory.request_key` - Имя атрибута запроса для получения имени обработчика
-- `response_factory.priority` - Приоритет для обработчика события ответа от контроллера
-- `response_factory.handlers` - Список обработчиков (json доступен по умолчанию)
-- `response_factory.default_handler` - Обработчик, используемый по умолчанию, если атрибут не указан.
+- ``response_factory.request_key`` - Имя атрибута запроса для получения имени обработчика
+- ``response_factory.priority`` - Приоритет для обработчика события ответа от контроллера
+- ``response_factory.handlers`` - Список обработчиков (json доступен по умолчанию)
+- ``response_factory.default_handler`` - Обработчик, используемый по умолчанию, если атрибут не указан.
 
 Вы так же можете определить свой обработчик:
 
@@ -45,18 +46,21 @@ Response Factory
         path: /
         defaults: {_controller: controller, _handler: handler_name}
 
-При создании собственного обработчика вы должны унаследоваться от `\\Vermillion\\ResponseFactory\\AbstractResponseHandler` или реализовать `\\Vermillion\\ResponseFactory\\HandlerInterface`
+При создании собственного обработчика вы должны унаследоваться
+от ``\Vermillion\ResponseFactory\AbstractResponseHandler``
+или реализовать ``\Vermillion\ResponseFactory\HandlerInterface``
 
-Использование `AbstractResponseHandler` позволит вам указывать в ответе контроллера необходимый статус и заголовки для ответа.
+Использование ``AbstractResponseHandler`` позволит вам указывать в ответе
+контроллера необходимый статус и заголовки для ответа.
 
 По умолчанию доступны обработчики, позволяющие конвертировать ответы контроллеров в json или html.
-Оба обработчика являются наследниками `AbstractResponseHandler`.
+Оба обработчика являются наследниками ``AbstractResponseHandler``.
 
 Значение, возвращаемое контроллером должно быть массивом.
-При использовании `AbstractResponseHandler` в массиве могут быть следующие элементы:
+При использовании ``AbstractResponseHandler`` в массиве могут быть следующие элементы:
 
-- `_status` - Статус ответа.
-- `_headers` - Массив заголовков ответа.
+- ``_status`` - Статус ответа.
+- ``_headers`` - Массив заголовков ответа.
 
 Пример:
 

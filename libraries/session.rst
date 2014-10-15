@@ -6,7 +6,7 @@ Session Provider
 Использование
 -------------
 
-Добавьте `\\Vermillion\\Session\\Provider` в `providers.php`
+Добавьте ``\Vermillion\Session\Provider`` в ``providers.php``
 
 Для того, чтобы переопределить опции по умолчанию, вы можете зарегистрировать провайдер следующим образом:
 

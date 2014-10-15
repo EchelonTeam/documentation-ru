@@ -6,11 +6,11 @@ Captcha Provider
 Использование
 -------------
 
-Добавьте `\\Vermillion\\Captcha\\Provider` в `providers.php`
+Добавьте ``\Vermillion\Captcha\Provider`` в ``providers.php``
 
-Для его работы также необходимо зарегистрировать `\\Vermillion\\Session\\Provider`.
+Для его работы также необходимо зарегистрировать ``\Vermillion\Session\Provider``.
 
-Отредактируйте `routing.yml`:
+Отредактируйте ``routing.yml``:
 
 .. code-block:: yaml
 
@@ -19,7 +19,8 @@ Captcha Provider
       defaults: {_controller: captcha:show}
       requirements: {_method: GET}
 
-Для проверки правильности пользовательского ввода вы можете использовать функцию `captcha.test`, которая зарегистрирована в контейнере:
+Для проверки правильности пользовательского ввода вы можете использовать
+функцию ``captcha.test``, которая зарегистрирована в контейнере:
 
 .. code-block:: php
 

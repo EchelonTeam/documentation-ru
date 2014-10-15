@@ -6,7 +6,7 @@ Security Provider
 Использование
 -------------
 
-Добавьте `\\Vermillion\\Security\\Provider` в `providers.php`:
+Добавьте ``\Vermillion\Security\Provider`` в ``providers.php``:
 
 .. code-block:: php
 
@@ -34,7 +34,7 @@ Security Provider
     ];
 
 
-`SecurityContext` доступен как security сервис:
+``SecurityContext`` доступен как security сервис:
 
 .. code-block:: php
 
@@ -44,7 +44,7 @@ Security Provider
         // ...
     }
 
-Если необходимо переопределить провайдер пользователей, то нужно заменить службу `security.user.provider`:
+Если необходимо переопределить провайдер пользователей, то нужно заменить службу ``security.user.provider``:
 
 .. code-block:: php
 

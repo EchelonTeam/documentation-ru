@@ -1,14 +1,15 @@
 JSON-RPC Provider
 =================
 
-Добавляет поддержку `JSON-RPC <http://www.jsonrpc.org/specification>`_ с помощью `Kilte/JSON-RPC <https://github.com/Kilte/json-rpc>`_. 
+Добавляет поддержку `JSON-RPC <http://www.jsonrpc.org/specification>`_
+с помощью `Kilte/JSON-RPC <https://github.com/Kilte/json-rpc>`_.
 
 Использование
 -------------
 
-Добавьте `\\Vermillion\\JsonRpc\\ServiceProvider` в `providers.php`.
+Добавьте ``\Vermillion\JsonRpc\ServiceProvider`` в ``providers.php``.
 
-Создайте класс приложения и зарегистрируйте его в контейнере под именем `jsonrpc.user_app`:
+Создайте класс приложения и зарегистрируйте его в контейнере под именем ``jsonrpc.user_app``:
 
 .. code-block:: php
 
@@ -28,9 +29,11 @@ JSON-RPC Provider
     
     }
     
-Если вам требуется использовать JSON-RPC через HTTP, то вы можете воспользоваться контроллером, предоставляемым провайдером по умолчанию.
+Если вам требуется использовать JSON-RPC через HTTP, то вы можете воспользоваться контроллером,
+предоставляемым провайдером по умолчанию.
 
-Для этого необходимо добавить `\\Vermillion\\JsonRpc\\ControllerProvider` в `providers.php` и отредактировать `routing.yml`:
+Для этого необходимо добавить ``\Vermillion\JsonRpc\ControllerProvider``
+в ``providers.php`` и отредактировать ``routing.yml``:
 
 .. code-block:: yaml
 
@@ -54,17 +57,23 @@ JSON-RPC Provider
     );
     $pimple['jsonrpc.middleware.logging'] = $pimple->protect(
         function (\Kilte\JsonRpc\Request\Request $request) use ($logger) {
-            $logger->info(sprintf('RPC call: %s %s %s', $request->getId(), $request->getMethod(), json_encode($request->getParams())));
+            $logger->info(sprintf(
+                'RPC call: %s %s %s',
+                $request->getId(),
+                $request->getMethod(),
+                json_encode($request->getParams())
+            ));
         }
     );
 
 
-По умолчанию доступен AccessControlMiddleware, который позволяет осуществить настройку доступа с использованием конфигурационного файла.
+По умолчанию доступен AccessControlMiddleware, который позволяет осуществить настройку доступа
+с использованием конфигурационного файла.
 
 Для его использования необходимо:
 
-- зарегистрировать и настроить `\\Vermillion\\Security\\Provider`.
-- создать конфигурационный файл `jsonrpc.yml`, определив в нём параметры доступа.
+- зарегистрировать и настроить ``\Vermillion\Security\Provider``.
+- создать конфигурационный файл ``jsonrpc.yml``, определив в нём параметры доступа.
 
 Пример конфигурационного файла:
 

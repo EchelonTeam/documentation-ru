@@ -1,21 +1,22 @@
 Authentication
 ==============
 
-Добавляет поддержку аутентификации и является легковесной альтернативой `Symfony/Security-Http`.
+Добавляет поддержку аутентификации и является легковесной альтернативой ``Symfony/Security-Http``.
 
 Использование
 -------------
 
-Добавьте `\\Vermillion\\Authentication\\Provider` в `providers.php`.
+Добавьте ``\Vermillion\Authentication\Provider`` в `providers.php`.
 
-Для его работы также необходимо зарегистрировать и настроить `\\Vermillion\\Security\\Provider` и `\\Vermillion\\Session\\Provider`.
+Для его работы также необходимо зарегистрировать
+и настроить ``\Vermillion\Security\Provider`` и ``\Vermillion\Session\Provider``.
 За более подробной информацией обратитесь в соответствующие разделы.
 
 Доступные опции:
 
-- `authentication.session_path` - Имя атрибута сессии, где будет храниться аутентифицированный токен.
-- `authentication.remember_me.cookie_path` - Имя cookie из которой будет создаваться токен.
-- `authentication.remember_me.cookie_options` - Опции cookie (lifetime, path, domain, secure, http_only)
+- ``authentication.session_path`` - Имя атрибута сессии, где будет храниться аутентифицированный токен.
+- ``authentication.remember_me.cookie_path`` - Имя cookie из которой будет создаваться токен.
+- ``authentication.remember_me.cookie_options`` - Опции cookie (lifetime, path, domain, secure, http_only)
 
 После регистрации провайдера необходимо создать контроллер, который будет аутентифицировать токен.
 
@@ -101,9 +102,9 @@ Authentication
     
     }
 
-Незабудьте добавить провайдер в `providers.php`
+Незабудьте добавить провайдер в ``providers.php``
 
-Отредактируйте `routing.yml`:
+Отредактируйте ``routing.yml``:
 
 .. code-block:: yaml
 

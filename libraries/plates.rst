@@ -6,15 +6,15 @@ Plates Provider
 Использование
 -------------
 
-Добавьте `\\Vermillion\\Plates\\Provider` в `providers.php`.
+Добавьте ``\Vermillion\Plates\Provider`` в ``providers.php``.
 
 **Опции:**
 
-- `plates.options.paths` - Список доступных `директорий <http://platesphp.com/engine/folders/>`_
-- `plates.options.extension` - `Расширение файла шаблона <http://platesphp.com/engine/file-extensions/>`_ (`php` по умолчанию)
-- `plates.options.ext.uri` - Параметр для `URI расширения <http://platesphp.com/extensions/uri/>`_
-- `plates.options.ext.asset.path` - Путь к директорию для `Asset расширения <http://platesphp.com/extensions/asset/>`_
-- `plates.options.ext.asset.filename_method` - Метод кеширования файла для Asset расширения (false по умолчнанию)
+- ``plates.options.paths`` - Список доступных `директорий <http://platesphp.com/engine/folders/>`_
+- ``plates.options.extension`` - `Расширение файла шаблона <http://platesphp.com/engine/file-extensions/>`_ (``php`` по умолчанию)
+- ``plates.options.ext.uri`` - Параметр для `URI расширения <http://platesphp.com/extensions/uri/>`_
+- ``plates.options.ext.asset.path`` - Путь к директорию для `Asset расширения <http://platesphp.com/extensions/asset/>`_
+- ``plates.options.ext.asset.filename_method`` - Метод кеширования файла для Asset расширения (false по умолчнанию)
 
 Регистрация:
 
@@ -34,15 +34,16 @@ Plates Provider
     ];
 
 
-Экземпляр класса `Engine` зарегистрирован как `plates`:
+Экземпляр класса ``Engine`` зарегистрирован как ``plates``:
 
 .. code-block:: php
     
     <?php
     $pimple['plates']->render('directory::template', []);
 
-Вы можете использовать функцию `url()` в ваших шаблонах для того, чтобы сгенерировать URL, используя `Symfony/Routing <http://symfony.com/doc/current/components/routing/introduction.html>`_ компонент.
+Вы можете использовать функцию ``url()`` в ваших шаблонах для того, чтобы сгенерировать URL,
+используя `Symfony/Routing <http://symfony.com/doc/current/components/routing/introduction.html>`_ компонент.
 
-Для того, чтобы добавить своё расширение, просто зарегистрируйте службу с именем, начинающимся с `plates.ext.`
+Для того, чтобы добавить своё расширение, просто зарегистрируйте службу с именем, начинающимся с ``plates.ext.``
 
 За более подробной информацией обратитесь к документации `библиотеки <http://platesphp.com>`_.

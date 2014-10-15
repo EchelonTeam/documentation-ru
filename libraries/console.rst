@@ -6,7 +6,7 @@ Console
 Использование
 -------------
 
-Создать файл `bin/console`:
+Создать файл ``bin/console``:
 
 .. code-block:: php
 
@@ -27,11 +27,11 @@ Console
     $ chmod +x bin/console
 
 
-Конструктор класса `\\Vermillion\\Console\\Application` принимает два аргумента. 
+Конструктор класса ``\Vermillion\Console\Application`` принимает два аргумента.
 
-Первый - путь к директорию с конфигами, второй (опциональный) - экземпляр класса `\\Pimple\\Container`.
+Первый - путь к директорию с конфигами, второй (опциональный) - экземпляр класса ``\Pimple\Container``.
  
-В директории с конфигами обязательно должен быть файл `providers.php`, который возвращает массив доступных провайдеров.
+В директории с конфигами обязательно должен быть файл ``providers.php``, который возвращает массив доступных провайдеров.
 
 
 Пример:
@@ -50,22 +50,25 @@ Console
     ];
     
 
-Опции можно указывать только для провайдеров, реализующих `\\Pimple\\ServiceProviderInterface`.
+Опции можно указывать только для провайдеров, реализующих ``\Pimple\ServiceProviderInterface``.
 
-Методы `setName()` и `setVersion()` устанавливают имя и версию приложения.
+Методы ``setName()`` и ``setVersion()`` устанавливают имя и версию приложения.
 
-Метод `run($interactive = false, InputInterface $in = null, OutputInterface $out = null)` - запускает приложение.
+Метод ``run($interactive = false, InputInterface $in = null, OutputInterface $out = null)`` - запускает приложение.
  
-Аргумент `$interactive` позволяет запусить шелл.
+Аргумент ``$interactive`` позволяет запусить шелл.
  
-Аргументы `$in` и `$out` - экземпляры классов, реализующих `\\Symfony\\Component\\Console\\Input\\InputInterface` и `\\Symfony\\Component\\Console\\Output\\OutputInterface`.
+Аргументы ``$in`` и ``$out`` - экземпляры классов,
+реализующих ``\Symfony\Component\Console\Input\InputInterface``
+и ``\Symfony\Component\Console\Output\OutputInterface``.
 
 При запуске шелла изменение значений аргументов не будет иметь никакого эффекта.
 
 Добавление команд
 ~~~~~~~~~~~~~~~~~
 
-Для того, чтобы добавить команду в приложение, вам необходимо создать для неё провайдер и добавить его в `providers.php`
+Для того, чтобы добавить команду в приложение, вам необходимо
+создать для неё провайдер и добавить его в ``providers.php``
 
 Пример:
 
@@ -90,4 +93,6 @@ Console
     
 Имя, под которым зарегистрирована команда в контейнере, не имеет никакого специального назначения.
 
-Для более подробной информации обратитесь к документации `компонента <http://symfony.com/doc/current/components/console/introduction.html>`_ и `Pimple <https://github.com/fabpot/Pimple>`_.
+Для более подробной информации обратитесь
+к документации `компонента <http://symfony.com/doc/current/components/console/introduction.html>`_
+и `Pimple <https://github.com/fabpot/Pimple>`_.

@@ -5,7 +5,7 @@
 Но эта проблема легко решается с помощью сторонних библиотек и провайдеров для них.
 
 Vermillion предлагает некоторые уже готовые решения. Все они уже включены в фреймворк.
-Вам остаётся только добавить провайдер в `providers.php` и задать необходимые опции, если это требуется.
+Вам остаётся только добавить провайдер в ``providers.php`` и задать необходимые опции, если это требуется.
 
 .. toctree::
     :maxdepth: 1
@@ -17,17 +17,17 @@ Vermillion предлагает некоторые уже готовые реш�
 
 Фреймворк предоставляет следующие интерфейсы для провайдеров:
 
-- `\\Vermillion\\General\\Api\\BootableProviderInterface`
-- `\\Vermillion\\General\\Api\\ControllerProviderInterface`
-- `\\Vermillion\\General\Api\\EventListenerProviderInterface`
-- `\\Vermillion\\General\\Api\\MiddlewareProviderInterface`
+- ``\Vermillion\General\Api\BootableProviderInterface``
+- ``\Vermillion\General\Api\ControllerProviderInterface``
+- ``\Vermillion\General\Api\EventListenerProviderInterface``
+- ``\Vermillion\General\Api\MiddlewareProviderInterface``
 
 BootableProviderInterface
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `void onBoot(\\Pimple\\Container $pimple)`
+- ``void onBoot(\Pimple\Container $pimple)``
 
-`onBoot()` вызывается во время вызова метода `\\Vermillion\\General\\Application::boot()`,
+``onBoot()`` вызывается во время вызова метода ``\Vermillion\General\Application::boot()``,
 после того, как все провайдеры были зарегистрированы.
 
 Вы можете использовать его для того, чтобы получить прямой доступ к службам, зарегистрированным в контейнере.
@@ -37,26 +37,26 @@ BootableProviderInterface
 ControllerProviderInterface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `void registerControllers(\\Pimple\\Container $controllers, \\Pimple\\Container $pimple);`
+- ``void registerControllers(\Pimple\Container $controllers, \Pimple\Container $pimple);``
 
-Используется для регистрации контроллеров в контейнере (`$controllers`).
+Используется для регистрации контроллеров в контейнере (``$controllers``).
 
 EventListenerProviderInterface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `void registerListeners(\\Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $dispatcher, \\Pimple\\Container $pimple)`
+- ``void registerListeners(\Symfony\Component\EventDispatcher\EventDispatcherInterface $dispatcher, \Pimple\Container $pimple)``
 
 Предназначен для регистрации обработчиков событий в диспетчере.
 
 MiddlewareProviderInterface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `\Symfony\Component\HttpKernel\HttpKernelInterface wrap(\\Symfony\\Component\\HttpKernel\\HttpKernelInterface $kernel, \\Pimple\\Container $pimple)`
+- ``\Symfony\Component\HttpKernel\HttpKernelInterface wrap(\Symfony\Component\HttpKernel\HttpKernelInterface $kernel, \Pimple\Container $pimple)``
 
-Используется для регистрации `middleware`.
+Используется для регистрации ``middleware``.
 
-Middleware представляет собой класс, реализующий `HttpKernelInterface`
-Его конструктор должен принять объект, реализующий `HttpKernelInterface`,
+Middleware представляет собой класс, реализующий ``HttpKernelInterface``
+Его конструктор должен принять объект, реализующий ``HttpKernelInterface``,
 а метод handle делегировать вызов принятому в конструкторе объекту.
 
 Пример:
@@ -110,9 +110,9 @@ Middleware представляет собой класс, реализующи�
 ~~~~~~~~~~~~~~~~
 
 Все приведённые выше интерфейсы позволяют получить доступ к контейнеру,
-содержащему службы через соответствующий аргумент метода (`$pimple`)
+содержащему службы через соответствующий аргумент метода (``$pimple``)
 
-Для провайдеров служб используйте `\\Pimple\\ServiceProviderInterface`
+Для провайдеров служб используйте ``\Pimple\ServiceProviderInterface``
 
 .. _Composer: http://getcomposer.org
 .. _Packagist: http://packagist.org/packages/vermillion
