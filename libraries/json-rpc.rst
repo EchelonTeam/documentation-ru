@@ -84,5 +84,14 @@ JSON-RPC Provider
       admin.user.remove: ROLE_ADMIN
       user.profile: ROLE_USER
       another.method: [ROLE_ONE, ROLE_TWO]
+    exception:
+        access_denied: -32001
+
+В секции ``exception`` определяются коды ошибок.
+``access_denied`` используется в ``AccessControlMiddleware`` и предназначен для определения кода ошибки,
+если доступ к методу запрещён.
+
+Код ошибки должен находиться в диапазоне между `-32000 и -32099 <http://www.jsonrpc.org/specification#error_object>`_.
+
 
 Для более подробной информации обратитесь к документации библиотеки.
