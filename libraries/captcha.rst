@@ -6,7 +6,9 @@ Captcha Provider
 Использование
 -------------
 
-Добавьте ``\Vermillion\Captcha\Provider`` в ``providers.php``
+В ``composer.json`` необходимо добавить: ``"gregwar/captcha": "~1.0"``
+
+Добавьте ``\Vermillion\Captcha\Provider`` в ``providers.php``.
 
 Для его работы также необходимо зарегистрировать ``\Vermillion\Session\Provider``.
 

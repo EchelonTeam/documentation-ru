@@ -7,6 +7,8 @@ JSON-RPC Provider
 Использование
 -------------
 
+В ``composer.json`` необходимо добавить ``"kilte/json-rpc": "~1.0"``.
+
 Добавьте ``\Vermillion\JsonRpc\ServiceProvider`` в ``providers.php``.
 
 Создайте класс приложения и зарегистрируйте его в контейнере под именем ``jsonrpc.user_app``:

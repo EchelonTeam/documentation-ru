@@ -6,6 +6,8 @@ Security Provider
 Использование
 -------------
 
+В ``composer.json`` необходимо добавить: ``"symfony/security-core": "~2.6"``.
+
 Добавьте ``\Vermillion\Security\Provider`` в ``providers.php``:
 
 .. code-block:: php
@@ -34,15 +36,26 @@ Security Provider
     ];
 
 
-``SecurityContext`` доступен как security сервис:
+``AuthorizationChecker`` доступен по ключу ``security.authorization_checker``:
 
 .. code-block:: php
 
     <?php
     $c->register(new SecurityCoreProvider(), $options);
-    if ($c['security']->isGranted('ROLE_ADMIN')) {
+    if ($c['security.authorization_checker']->isGranted('ROLE_ADMIN')) {
         // ...
     }
+
+Для получения токена используйте сервис ``security.token_storage``
+
+.. code-block:: php
+
+    <?php
+    $token = $c['security.token_storage']->getToken();
+    if ($token instanceof TokenInterface) {
+        $user = $token->getUser();
+    }
+
 
 Если необходимо переопределить провайдер пользователей, то нужно заменить службу ``security.user.provider``:
 

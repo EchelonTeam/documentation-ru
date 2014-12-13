@@ -6,6 +6,8 @@ Console
 Использование
 -------------
 
+В ``composer.json`` необходимо добавить: ``"symfony/console": "~2.6"``.
+
 Создать файл ``bin/console``:
 
 .. code-block:: php

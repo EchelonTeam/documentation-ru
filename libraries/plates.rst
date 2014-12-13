@@ -6,6 +6,8 @@ Plates Provider
 Использование
 -------------
 
+В ``composer.json`` необходимо добавить ``"league/plates": "~3.1"``.
+
 Добавьте ``\Vermillion\Plates\Provider`` в ``providers.php``.
 
 **Опции:**

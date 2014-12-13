@@ -6,7 +6,7 @@ Authentication
 Использование
 -------------
 
-Добавьте ``\Vermillion\Authentication\Provider`` в `providers.php`.
+Добавьте ``\Vermillion\Authentication\Provider`` в ``providers.php``.
 
 Для его работы также необходимо зарегистрировать
 и настроить ``\Vermillion\Security\Provider`` и ``\Vermillion\Session\Provider``.
