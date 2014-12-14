@@ -18,5 +18,40 @@ Configuration
 
 Поддерживаемые типы файлов: ``yaml``, ``php``, ``json``
 
+При загрузке конфигурационного файла будет проверяться наличие локального конфига.
+Если он существует, то параметры, описанные в нём, переопределят параметры оригинального конфига.
+
+Пример:
+
+.. code-block:: php
+
+    <?php
+    // config.php
+    return [
+        'key' => 'value',
+        'customized' => 'default'
+    ];
+
+.. code-block:: php
+
+    <?php
+    // config.php.local
+    return [
+        'customized' => 'user'
+    ];
+
+
+Вызов ``$pimple['config']->load('config.php');`` вернёт массив со следующим содержимым:
+
+.. code-block:: php
+
+    <?php
+
+    [
+        'key' => 'value',
+        'customized' => 'user'
+    ]
+
+
 Для более подробной информации обратитесь
 к `документации <http://symfony.com/doc/current/components/config/index.html>`_ компонента.
