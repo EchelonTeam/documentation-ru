@@ -29,7 +29,11 @@ Configuration
     // config.php
     return [
         'key' => 'value',
-        'customized' => 'default'
+        'customized' => 'default',
+        'nested' => [
+            'k1' => 'v1',
+            'k2' => 'v2',
+        ],
     ];
 
 .. code-block:: php
@@ -37,7 +41,10 @@ Configuration
     <?php
     // config.php.local
     return [
-        'customized' => 'user'
+        'customized' => 'user',
+        'nested' => [
+            'k2' => 'v2local',
+        ],
     ];
 
 
@@ -49,7 +56,11 @@ Configuration
 
     [
         'key' => 'value',
-        'customized' => 'user'
+        'customized' => 'user',
+        'nested' => [
+            'k1' => 'v1',
+            'k2' => 'v2local',
+        ],
     ]
 
 
