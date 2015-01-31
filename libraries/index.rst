@@ -11,7 +11,6 @@
     js-url-generator
     json-request
     json-rpc
-    plates
     response-factory
     security
     session

@@ -9,7 +9,6 @@ Vermillion - это легковесный фреймворк для PHP 5.4 и 
 
 - `HttpKernelInterface based Middlewares <http://stackphp.com>`_
 - поддержка `JSON-RPC 2.0 <http://jsonrpc.org>`_
-- `Plates <http://platesphp.com>`_ вместо шаблонизатора
 - и многое другое...
 
 
