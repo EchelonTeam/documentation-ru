@@ -82,12 +82,16 @@ JSON-RPC Provider
 .. code-block:: yaml
 
     access_map:
-      admin.user.edit: ROLE_ADMIN
-      admin.user.remove: ROLE_ADMIN
+      admin.*: ROLE_ADMIN
       user.profile: ROLE_USER
       another.method: [ROLE_ONE, ROLE_TWO]
     exception:
         access_denied: -32001
+
+Когда указан список ролей, доступ будет разрешён если пользователь имеет хотябы одну роль из списка.
+
+Строка ``admin.*: ROLE_ADMIN`` указывает на то, что только пользователь с ролью ``ROLE_ADMIN``
+может выполнять методы, начинающиеся с ``admin.``
 
 В секции ``exception`` определяются коды ошибок.
 ``access_denied`` используется в ``AccessControlMiddleware`` и предназначен для определения кода ошибки,
